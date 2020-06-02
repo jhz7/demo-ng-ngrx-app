@@ -26,28 +26,38 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
-    "server": "ts-node ./server/server.ts"
+    "server": "ts-node ./server/server.ts",
+    "bundle-report-admin-portal": "webpack-bundle-analyzer dist/apps/admin-portal/stats.json"
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "9.3.0",
-    "@angular/animations": "^9.1.0",
+    "@angular/animations": "^9.1.9",
+    "@angular/cdk": "^9.2.4",
     "@angular/common": "^9.1.0",
     "@angular/compiler": "^9.1.0",
     "@angular/core": "^9.1.0",
+    "@angular/flex-layout": "^9.0.0-beta.31",
     "@angular/forms": "^9.1.0",
+    "@angular/material": "^9.2.4",
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
     "@angular/router": "^9.1.0",
+    "@nrwl/angular": "9.3.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.4",
-    "zone.js": "^0.10.2"
+    "zone.js": "^0.10.2",
+    "@ngrx/store": "9.1.0",
+    "@ngrx/effects": "9.1.0",
+    "@ngrx/entity": "9.1.0",
+    "@ngrx/router-store": "9.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.0",
     "@angular/cli": "9.1.0",
     "@angular/compiler-cli": "^9.1.0",
     "@angular/language-service": "^9.1.0",
+    "@ngrx/schematics": "9.1.0",
+    "@ngrx/store-devtools": "9.1.0",
     "@nrwl/cypress": "9.3.0",
     "@nrwl/jest": "9.3.0",
     "@nrwl/workspace": "9.3.0",
@@ -64,6 +74,7 @@
     "ts-jest": "25.2.1",
     "ts-node": "^7.0.1",
     "tslint": "~6.0.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "webpack-bundle-analyzer": "^3.8.0"
   }
 }
